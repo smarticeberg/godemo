@@ -18,6 +18,7 @@ type Feed struct {
 func RetrieveFeeds() ([]*Feed, error) {
 
 	// open file
+	// 获取相对路径的文件信息
 	_, filename, _, _ := runtime.Caller(1)
 	datapath := path.Join(path.Dir(filename), dataFile)
 	file, err := os.Open(datapath)
